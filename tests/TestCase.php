@@ -23,6 +23,10 @@ abstract class TestCase extends BaseTestCase
             'database' => env('DB_DATABASE', ':memory:'),
             'prefix'   => '',
         ]);
+
+        // Generate a random encryption key at runtime (no secrets in VCS)
+        $key = 'base64:'.base64_encode(random_bytes(32));
+        $app['config']->set('app.key', $key);
     }
 
     protected function setUp(): void

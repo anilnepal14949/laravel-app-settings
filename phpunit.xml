@@ -8,7 +8,6 @@
 
   <php>
     <!-- Make tests predictable -->
-    <env name="APP_KEY" value="base64:ih5xQ1j0uJgU7XvFDb91qQGQxQmFh6o1uWq8dH0m0FQ="/>
     <env name="CACHE_STORE" value="array"/>
     <env name="DB_CONNECTION" value="sqlite"/>
     <env name="DB_DATABASE" value=":memory:"/>
