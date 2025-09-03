@@ -1,0 +1,45 @@
+{
+    "name": "shreeja_digital/laravel-app-settings",
+    "description": "Tiny DB + cache backed application settings for Laravel.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+      "psr-4": {
+        "ShreejaDigital\\Settings\\": "src/",
+        "ShreejaDigital\\Settings\\Tests\\": "tests/"
+      },
+      "files": [
+        "src/Helpers/Helpers.php"
+      ]
+    },
+    "require": {
+      "php": "^8.2|^8.3|^8.4",
+      "illuminate/support": "^10.0|^11.0|^12.0",
+      "illuminate/database": "^10.0|^11.0|^12.0",
+      "illuminate/cache": "^10.0|^11.0|^12.0",
+      "illuminate/encryption": "^10.0|^11.0|^12.0"
+    },
+    "extra": {
+      "laravel": {
+        "providers": [
+          "ShreejaDigital\\Settings\\SettingsServiceProvider"
+        ],
+        "aliases": {
+          "Settings": "ShreejaDigital\\Settings\\Facades\\Settings"
+        }
+      }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.6",
+        "pestphp/pest": "^3.8",
+        "pestphp/pest-plugin-laravel": "^3.2"
+    },
+    "scripts": {
+      "test": "pest"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
